@@ -1,5 +1,6 @@
 import math
 
+#Implementation of algorthm to find the closest pair of points in nlogn time. 
 
 def main():
 
@@ -90,13 +91,11 @@ def closest_point(P_L,P_R):
         min_dist,min_pair=distR,[p1_R,p2_R]
         #print(min_pair)
 
+    #uses geometric argument to search around the middle point
     in_strip=[]
     for point in P_L:
-        #print(abs( point[0]-X_Center_Val))
-        #print(min_dist)
         if abs( point[0]-X_Center_Val)< min_dist:
             in_strip.append(point)
-    #print(in_strip)
     in_strip_ln=len(in_strip)
     for i in range(0,in_strip_ln-1): 
         for j in range(i+1,min(7,in_strip_ln)):
